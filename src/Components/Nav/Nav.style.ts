@@ -11,6 +11,7 @@ export const Container = styled.nav`
   @media only screen and (max-width: ${breakpoints.smallest}) {
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 `;
 
@@ -30,6 +31,10 @@ export const Brand = styled.a`
   font-weight: 700;
   font-size: 1.75rem;
   text-decoration: none;
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    margin: 0 auto;
+  }
 `;
 
 export const Link = styled.a`
