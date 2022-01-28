@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Brand, Container, Link, List, LoginButton, SignUpButton } from './Nav.style';
+import { Brand, Container, Link, List, LoginButton, SignUpButton} from './Nav.style';
 
 const Nav = () => {
   return (

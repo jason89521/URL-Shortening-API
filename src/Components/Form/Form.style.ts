@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import breakpoints from 'breakpoints';
 import bgShortenBig from 'images/bg-shorten-desktop.svg';
+import bgShortenSmall from 'images/bg-shorten-mobile.svg';
 import { default as Btn } from 'Components/Button';
 
 export const Container = styled.section`
@@ -13,13 +14,14 @@ export const FormBox = styled.form`
   padding: 2rem 3rem;
   border-radius: 10px;
   background-image: url(${bgShortenBig}), linear-gradient(var(--violet), var(--violet));
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   gap: 1rem;
   position: relative;
 
   @media only screen and (max-width: ${breakpoints.smallest}) {
     flex-direction: column;
+    background-image: url(${bgShortenSmall}), linear-gradient(var(--violet), var(--violet));
   }
 `;
 

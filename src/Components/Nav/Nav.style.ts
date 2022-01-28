@@ -7,6 +7,11 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 `;
 
 export const List = styled.div`
@@ -14,6 +19,10 @@ export const List = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    flex: 0 0 100%;
+  }
 `;
 
 export const Brand = styled.a`
