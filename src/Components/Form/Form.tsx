@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Container, FormBox, Input, ErrorMsg, Button } from './Form.style';
 import shortenApi from 'shortenApi';
 
-type ERROR_TYPE = 2 | 3 | 4 | 5 | 6;
+type ERROR_TYPE = 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 const ERROR_MSG = {
   2: 'Invalid URL',
@@ -12,13 +12,17 @@ const ERROR_MSG = {
   4: 'IP-address has been blocked',
   5: 'shrtcode code (slug) already taken/in use',
   6: 'Unknown error',
+  7: 'No code specified ("code" parameter is empty)',
+  8: 'Invalid code submitted',
+  9: 'Missing required parameters',
+  10: 'Trying to shorten a disallowed Link',
 };
 
 interface FormProps {
-  onGetResponse: (original: string, shorten:string) => void;
+  onGetResponse: (original: string, shorten: string) => void;
 }
 
-const Form = ({onGetResponse}: FormProps) => {
+const Form = ({ onGetResponse }: FormProps) => {
   const [value, setValue] = useState('');
   const [isValid, setIsValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
@@ -39,7 +43,7 @@ const Form = ({onGetResponse}: FormProps) => {
     try {
       const response = await shortenApi.get('/shorten', { params: { url: value } });
       const result = response.data.result;
-      onGetResponse(result.original_link,  result.full_short_link);
+      onGetResponse(result.original_link, result.full_short_link);
     } catch (error) {
       setIsValid(false);
       if (axios.isAxiosError(error)) {
@@ -59,7 +63,7 @@ const Form = ({onGetResponse}: FormProps) => {
           onChange={onInputChange}
         />
         <ErrorMsg isValid={isValid}>{errorMessage}</ErrorMsg>
-        <Button >shorten it!</Button>
+        <Button>shorten it!</Button>
       </FormBox>
     </Container>
   );

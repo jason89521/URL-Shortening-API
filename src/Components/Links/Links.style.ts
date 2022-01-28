@@ -6,6 +6,9 @@ export const Container = styled.ul`
   list-style: none;
   background-color: var(--light-violet);
   padding: 1rem var(--padding-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
 export const Item = styled.li`
@@ -26,6 +29,15 @@ export const NewLink = styled.span`
   color: var(--blue);
 `;
 
-export const Button = styled(Btn)`
+interface ButtonProps {
+  isCopied: boolean;
+}
+
+export const Button = styled(Btn)<ButtonProps>`
+  flex: 0 0 5rem;
   border-radius: 5px;
+  background-color: ${props => (props.isCopied ? 'var(--violet)' : '')};
+  &:hover {
+    background-color: ${props => (props.isCopied ? 'var(--violet-2)' : '')};
+  }
 `;

@@ -5,6 +5,7 @@ export const ResetStyle = createGlobalStyle`
     --blue: hsl(180, 66%, 49%);
     --light-blue: hsl(180, 66%, 60%);
     --violet: hsl(257, 27%, 26%);
+    --violet-2: hsl(257, 27%, 50%);
     --red: hsl(0, 87%, 67%);
     --gray: hsl(0, 0%, 75%);
     --light-violet: hsl(225, 33%, 95%);
