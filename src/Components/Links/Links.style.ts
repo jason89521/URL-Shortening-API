@@ -23,7 +23,7 @@ export const OriginLink = styled.span`
 `;
 
 export const NewLink = styled.span`
-  color: hsl(var(--blue));
+  color: var(--blue);
 `;
 
 export const Button = styled(Btn)`

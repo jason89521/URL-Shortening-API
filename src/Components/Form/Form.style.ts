@@ -15,15 +15,29 @@ export const FormBox = styled.form`
   background-repeat: no-repeat;
   display: flex;
   gap: 1rem;
+  position: relative;
 `;
 
-export const Input = styled.input`
+interface InputProps {
+  isValid?: boolean;
+}
+
+export const Input = styled.input<InputProps>`
+  outline: ${props => (props.isValid ? 'none' : '3px solid var(--red)')};
   border: none;
-  outline: none;
   border-radius: 5px;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   font-size: 1.05rem;
   flex: 1 0;
+`;
+
+export const ErrorMsg = styled.span<InputProps>`
+  display: ${props => (props.isValid ? 'none' : 'block')};
+  position: absolute;
+  bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--red);
 `;
 
 export const Button = styled(Btn)`
