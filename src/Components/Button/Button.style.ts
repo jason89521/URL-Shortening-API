@@ -9,7 +9,7 @@ export const Container = styled.button`
   outline: none;
   border-radius: 10rem;
   padding: 0.6rem 1.2rem;
-  background-color:var(--blue);
+  background-color: var(--blue);
 
   &:hover {
     background-color: var(--light-blue);

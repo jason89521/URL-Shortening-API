@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import breakpoints from 'breakpoints';
 
 export const ResetStyle = createGlobalStyle`
   :root {
@@ -14,7 +15,18 @@ export const ResetStyle = createGlobalStyle`
     --dark-violet: hsl(260, 8%, 14%);
 
     --padding-bg: 12rem;
-    --margin-bg: 12rem;
+
+    @media only screen and (max-width:${breakpoints.largest}) {
+      --padding-bg: 6rem;
+    }
+
+    @media only screen and (max-width:${breakpoints.large}) {
+      --padding-bg: 3rem;
+    }
+
+    @media only screen and (max-width:${breakpoints.medium}) {
+      --padding-bg: 1rem;
+    }
   }
 
   *,
@@ -23,12 +35,25 @@ export const ResetStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-size: inherit;
   }
 
   html {
     font-size: 112.5%;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
+    @media only screen and (max-width:${breakpoints.large}) {
+      font-size: 100%;
+    }
+
+    @media only screen and (max-width:${breakpoints.small}) {
+      font-size: 62.5%;
+    }
+
+    @media only screen and (max-width:${breakpoints.smallest}) {
+      font-size: 50%;
+    }
   }
 `;
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import breakpoints from 'breakpoints';
 import bgShortenBig from 'images/bg-shorten-desktop.svg';
 import { default as Btn } from 'Components/Button';
 
@@ -16,6 +17,10 @@ export const FormBox = styled.form`
   display: flex;
   gap: 1rem;
   position: relative;
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    flex-direction: column;
+  }
 `;
 
 interface InputProps {
@@ -29,6 +34,11 @@ export const Input = styled.input<InputProps>`
   padding: 0.75rem 1rem;
   font-size: 1.05rem;
   flex: 1 0;
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    border-radius: 2px;
+    outline: ${props => (props.isValid ? 'none' : '2px solid var(--red)')};
+  }
 `;
 
 export const ErrorMsg = styled.span<InputProps>`
@@ -38,6 +48,11 @@ export const ErrorMsg = styled.span<InputProps>`
   font-size: 0.75rem;
   font-style: italic;
   color: var(--red);
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    bottom: auto;
+    top: 0.25rem;
+  }
 `;
 
 export const Button = styled(Btn)`

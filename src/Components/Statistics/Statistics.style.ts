@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import breakpoints from 'breakpoints';
 
 export const Container = styled.section`
   padding: 4rem var(--padding-bg);
@@ -27,7 +28,7 @@ export const Cards = styled.div`
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 45%;
     z-index: 1;
@@ -46,6 +47,40 @@ export const Cards = styled.div`
 
   & > *:nth-child(3) {
     align-self: flex-end;
+  }
+
+  @media only screen and (max-width: ${breakpoints.large}) {
+    height: auto;
+
+    & > *:nth-child(1) {
+      align-self: stretch;
+    }
+
+    & > *:nth-child(2) {
+      align-self: stretch;
+    }
+
+    & > *:nth-child(3) {
+      align-self: stretch;
+    }
+  }
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    flex-direction: column;
+    gap: 3rem;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 4px;
+      height: 100%;
+      background-color: var(--blue);
+    }
   }
 `;
 
@@ -69,6 +104,10 @@ export const Card = styled.div`
     color: var(--gray-violet);
     font-size: 0.8rem;
   }
+
+  @media only screen and (max-width: ${breakpoints.smallest}) {
+    align-items: center;
+  }
 `;
 
 export const IconCircle = styled.div`
@@ -84,4 +123,4 @@ export const IconCircle = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;

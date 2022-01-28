@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { default as Btn } from 'Components/Button';
+import breakpoints from 'breakpoints';
 
 export const Container = styled.nav`
   padding: 1.5rem var(--padding-bg);
@@ -36,4 +38,8 @@ export const Link = styled.a`
 
 export const LoginButton = styled(Link)`
   margin-left: auto;
+`;
+
+export const SignUpButton = styled(Btn)`
+  font-size: 0.75rem;
 `;

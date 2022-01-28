@@ -1,7 +1,6 @@
-import Button from 'Components/Button';
 import React from 'react';
 
-import { Brand, Container, Link, List, LoginButton } from './Nav.style';
+import { Brand, Container, Link, List, LoginButton, SignUpButton } from './Nav.style';
 
 const Nav = () => {
   return (
@@ -12,7 +11,7 @@ const Nav = () => {
         <Link href="#">Pricing</Link>
         <Link href="#">Resources</Link>
         <LoginButton>login</LoginButton>
-        <Button>sign up</Button>
+        <SignUpButton>sign up</SignUpButton>
       </List>
     </Container>
   );
