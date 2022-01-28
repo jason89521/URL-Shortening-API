@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/URL-Shortening-API/static/js/main.426ab4c7.js",
+    "static/media/illustration-working.svg": "/URL-Shortening-API/static/media/illustration-working.c9b5ef5452363d8be3df709375d50bd0.svg",
+    "static/media/icon-fully-customizable.svg": "/URL-Shortening-API/static/media/icon-fully-customizable.a1532a74fa781f6fde327313bd5ffce3.svg",
+    "static/media/icon-brand-recognition.svg": "/URL-Shortening-API/static/media/icon-brand-recognition.c349d3b69f7442e5ac3552e4138e72e7.svg",
+    "static/media/bg-boost-desktop.svg": "/URL-Shortening-API/static/media/bg-boost-desktop.772154c9b0e451733f5ef5a737ffe720.svg",
+    "static/media/icon-detailed-records.svg": "/URL-Shortening-API/static/media/icon-detailed-records.265c8aea77b546e08ba3575f6a8a9f70.svg",
+    "static/media/icon-instagram.svg": "/URL-Shortening-API/static/media/icon-instagram.85b950e88698f999001549b616494801.svg",
+    "index.html": "/URL-Shortening-API/index.html",
+    "static/media/icon-pinterest.svg": "/URL-Shortening-API/static/media/icon-pinterest.be035206e6b30db552eac09ef67efc60.svg",
+    "static/media/bg-shorten-desktop.svg": "/URL-Shortening-API/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b40ccf28727af.svg",
+    "static/media/icon-twitter.svg": "/URL-Shortening-API/static/media/icon-twitter.ba3fcfc42aa262c784b870bc05bbb8c4.svg",
+    "static/media/icon-facebook.svg": "/URL-Shortening-API/static/media/icon-facebook.bc5c7719e491de7a8474ca17cf70ddb8.svg",
+    "main.426ab4c7.js.map": "/URL-Shortening-API/static/js/main.426ab4c7.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.426ab4c7.js"
+  ]
+}
